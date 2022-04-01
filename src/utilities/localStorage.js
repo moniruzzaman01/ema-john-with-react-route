@@ -10,15 +10,14 @@ const getLocalData = () => {
 
 const setLocalData = (productId) => {
   const storedData = getLocalData();
-  for (const id in storedData) {
-    if (productId === id) {
-      console.log("matched");
-    } else {
-      storedData[id] = 1;
-      console.log("hello");
-    }
+  let quantity = storedData[productId];
+  if (quantity) {
+    quantity = quantity + 1;
+    storedData[productId] = quantity;
+  } else {
+    storedData[productId] = 1;
   }
-  console.log("stored", storedData);
-  //   localStorage.setItem("cart", JSON.stringify(storedData));
+
+  localStorage.setItem("cart", JSON.stringify(storedData));
 };
 export { getLocalData, setLocalData };
