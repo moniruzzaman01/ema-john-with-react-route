@@ -1,0 +1,34 @@
+.review-product {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #1c2b35;
+  margin: 20px auto;
+  width: 60%;
+  border-radius: 5px;
+  height: 110px;
+}
+.review-product img {
+  position: absolute;
+  width: 100px;
+  margin: 5px;
+  top: 0;
+  border-radius: 5px;
+}
+.review-product .details {
+  position: absolute;
+  left: 120px;
+}
+.review-product .details p {
+  margin: 0;
+}
+.review-product .details p span {
+  color: #ff9900;
+}
+.review-product .icon {
+  color: rgb(235, 86, 86);
+  margin: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}

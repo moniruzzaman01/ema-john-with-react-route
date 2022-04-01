@@ -1,33 +1,37 @@
 import React, { useEffect, useState } from "react";
+import useCart from "../../hooks/useCart";
+import useProducts from "../../hooks/useProducts";
 import { getLocalData, setLocalData } from "../../utilities/localStorage";
 import Cart from "../cart/Cart";
 import Product from "../product/Product";
 import "./Order.css";
 
 const Order = () => {
-  const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
-  useEffect(() => {
-    fetch("products.json")
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
+  // const [products, setProducts] = useState([]);
+  // useEffect(() => {
+  //   fetch("products.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setProducts(data));
+  // }, []);
+  const [products, setProducts] = useProducts();
 
-  //call data from local storage
-  useEffect(() => {
-    let storedData = getLocalData();
-    let saved = [];
-    for (const id in storedData) {
-      // console.log("qnty", storedData[id]);
-      const savedData = products.find((product) => product.id === id);
-      if (savedData) {
-        const quantity = storedData[id];
-        savedData.quantity = quantity;
-        saved.push(savedData);
-      }
-    }
-    setCart(saved);
-  }, [products]);
+  // const [cart, setCart] = useState([]);
+  // //call data from local storage
+  // useEffect(() => {
+  //   let storedData = getLocalData();
+  //   let saved = [];
+  //   for (const id in storedData) {
+  //     // console.log("qnty", storedData[id]);
+  //     const savedData = products.find((product) => product.id === id);
+  //     if (savedData) {
+  //       const quantity = storedData[id];
+  //       savedData.quantity = quantity;
+  //       saved.push(savedData);
+  //     }
+  //   }
+  //   setCart(saved);
+  // }, [products]);
+  const [cart, setCart] = useCart(products);
 
   const addToCartHandle = (product) => {
     let newCart;
