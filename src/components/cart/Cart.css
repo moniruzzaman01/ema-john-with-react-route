@@ -1,0 +1,13 @@
+.cart {
+  background-color: #1c2b35;
+  position: sticky;
+  top: 100px;
+}
+.cart .elements {
+  margin-left: 15px;
+  color: #fff;
+}
+.cart .elements h3 {
+  border-bottom: 1px solid #fff;
+  display: inline;
+}
