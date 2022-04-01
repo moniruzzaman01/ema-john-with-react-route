@@ -20,4 +20,11 @@ const setLocalData = (productId) => {
 
   localStorage.setItem("cart", JSON.stringify(storedData));
 };
-export { getLocalData, setLocalData };
+
+const removeSelectedLocalData = (id) => {
+  const storedData = getLocalData();
+  delete storedData[id];
+  localStorage.setItem("cart", JSON.stringify(storedData));
+};
+
+export { getLocalData, setLocalData, removeSelectedLocalData };

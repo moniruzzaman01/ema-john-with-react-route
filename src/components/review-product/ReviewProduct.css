@@ -19,6 +19,7 @@
 .review-product .details {
   position: absolute;
   left: 120px;
+  width: 60%;
 }
 .review-product .details p {
   margin: 0;

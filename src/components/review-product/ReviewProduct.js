@@ -3,7 +3,7 @@ import "./ReviewProduct.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
-const ReviewProduct = ({ product }) => {
+const ReviewProduct = ({ product, removeBtnHandle }) => {
   //   console.log("product", product);
   return (
     <div className="review-product">
@@ -24,7 +24,10 @@ const ReviewProduct = ({ product }) => {
         </p>
       </div>
       <div className="icon">
-        <FontAwesomeIcon icon={faTrashAlt} />
+        <FontAwesomeIcon
+          onClick={() => removeBtnHandle(product)}
+          icon={faTrashAlt}
+        />
       </div>
     </div>
   );
