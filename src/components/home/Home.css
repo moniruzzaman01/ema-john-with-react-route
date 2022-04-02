@@ -1,0 +1,46 @@
+.home {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  height: 90vh;
+  align-items: center;
+}
+.home .content {
+  margin: 50px auto 20px auto;
+}
+.home .content span {
+  color: #ff9900;
+  font-size: 17px;
+}
+.home .content h2 {
+  color: #1c2b35;
+  font-size: 60px;
+  margin-bottom: 0;
+}
+.home .content p {
+  margin-top: 0;
+  color: #2a414f;
+  font-size: 24px;
+}
+.home .content button {
+  background-color: #ff9900;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.home .img {
+  position: relative;
+  height: 70vh;
+  width: 46vh;
+  padding: 5px;
+  background-color: #ff9900;
+  margin: 0 auto;
+}
+
+.home img {
+  /* display: none; */
+  position: absolute;
+  top: -10px;
+  right: -12px;
+  height: 100%;
+}

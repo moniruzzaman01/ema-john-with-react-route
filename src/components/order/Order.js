@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
 import useCart from "../../hooks/useCart";
 import useProducts from "../../hooks/useProducts";
-import { getLocalData, setLocalData } from "../../utilities/localStorage";
+import { setLocalData } from "../../utilities/localStorage";
 import Cart from "../cart/Cart";
 import Product from "../product/Product";
 import "./Order.css";
